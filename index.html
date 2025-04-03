@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[그라비터] G1-레스큐</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>[그라비터] G1-레스큐</h1>
+  </header>
+
+  <div class="container">
+    <div class="image-section">
+      <div class="image-wrapper">
+        <div class="image-stack" id="image-stack">
+          <img id="base-layer" src="assets/base.png" alt="베이스">
+          <img id="main-layer" src="assets/main-red.png" alt="메인" style="display: block;">
+          <img id="crotch-layer" src="assets/crotch.png" alt="크로치" style="display: block;">
+          <img id="zip-wrist-layer" src="assets/zip-wrist.png" alt="손목지퍼" style="display: block;">
+          <img id="zip-ankle-layer" src="assets/zip-ankle.png" alt="발목지퍼" style="display: block;">
+          <img id="pocket-layer" src="assets/pocket.png" alt="포켓" style="display: block;">
+
+          <!--
+          <img id="logo-layer" src="assets/side-blk.png" alt="사이바">
+          -->
+        </div>  
+        <div id="selected-color-text" class="selected-color">
+          메인: 블랙 / 크로치: Yes / 손목지퍼: Yes / 발목지퍼: Yes / 포켓: Yes
+        </div>
+        <button class="download-button" onclick="downloadCompositeImage()">이미지 다운로드</button>
+<div class="copyright-text">
+  © 2025 할로우커스텀. All rights reserved.</div>
+  
+      </div>
+      
+    </div>
+
+    <div class="controls-section">
+      <h3 class="section-title">메인</h3>
+      <div class="color-row">
+        <button class="color-button color-black" onclick="changeMainColor('blk')">블랙</button>
+        <button class="color-button color-charcoal" onclick="changeMainColor('chr')">차콜</button>
+        <button class="color-button color-silver" onclick="changeMainColor('slv')">실버</button>
+        <button class="color-button color-blue" onclick="changeMainColor('blu')">블루</button>
+        <button class="color-button color-red" onclick="changeMainColor('red')">레드</button>
+        <button class="color-button color-orange" onclick="changeMainColor('org')">오렌지</button>
+        <button class="color-button color-skyblu" onclick="changeMainColor('sky')">하늘</button>
+        <button class="color-button color-yellow" onclick="changeMainColor('yel')">노랑</button>
+        <button class="color-button color-mint" onclick="changeMainColor('mnt')">민트</button>
+        <button class="color-button color-olive" onclick="changeMainColor('olv')">올리브</button>
+        <button class="color-button color-purple" onclick="changeMainColor('pur')">퍼플</button>
+        <button class="color-button color-white" onclick="changeMainColor('wht')">화이트</button>
+        <button class="color-button color-cblue" onclick="changeMainColor('cblu')">카모블루</button>
+        <button class="color-button color-cred" onclick="changeMainColor('cred')">카모레드</button>
+        <button class="color-button color-cgrn" onclick="changeMainColor('cgrn')">카모그린</button>
+        <button class="color-button color-csf" onclick="changeMainColor('csf')">카모SF</button>
+        <button class="color-button color-cblk" onclick="changeMainColor('cblk')">카모블랙</button>
+      </div>
+
+      <h3 class="section-title">옵션 선택</h3>
+      <div class="checkbox-group">
+        <label><input type="checkbox" id="crotch-checkbox" checked onchange="toggleOption('crotch-layer')"> 크로치</label>
+        <label><input type="checkbox" id="zip-wrist-checkbox" checked onchange="toggleOption('zip-wrist-layer')"> 손목지퍼</label>
+        <label><input type="checkbox" id="zip-ankle-checkbox" checked onchange="toggleOption('zip-ankle-layer')"> 발목지퍼</label>
+        <label><input type="checkbox" id="pocket-checkbox" checked onchange="toggleOption('pocket-layer')"> 포켓</label>
+      </div>
+
+      <!--
+      <h3 class="section-title">사이바</h3>
+      <div class="color-row">
+        <button class="color-button color-black" onclick="changeSideColor('blk')">블랙</button>
+        <button class="color-button color-charcoal" onclick="changeSideColor('chr')">차콜</button>
+        <button class="color-button color-silver" onclick="changeSideColor('slv')">실버</button>
+        <button class="color-button color-blue" onclick="changeSideColor('blu')">블루</button>
+        <button class="color-button color-red" onclick="changeSideColor('red')">레드</button>
+        <button class="color-button color-gold" onclick="changeSideColor('gld')">골드</button>
+      </div>
+      -->
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

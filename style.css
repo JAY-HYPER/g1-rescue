@@ -1,0 +1,180 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.page-header h1 {
+  text-align: left;
+  margin-left: 32px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 60px);
+  overflow: hidden;
+}
+
+.image-section {
+  flex: 1;
+  min-width: 400px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  background-color: #f0f0f0;
+}
+
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-stack {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.image-stack img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.controls-section {
+  width: 320px;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.color-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.color-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.color-row::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.color-button {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.color-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.download-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  background-color: #333333;
+}
+
+.copyright-text {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666666;
+  text-align: center;
+}
+
+.selected-color {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #222;
+  text-align: center;
+}
+
+/* 색상별 버튼 배경 */
+.color-black { background-color: #000000; }
+.color-charcoal { background-color: #3a3a3a; }
+.color-silver { background-color: #c0c0c0; color: #222; }
+.color-blue { background-color: #2563eb; }
+.color-red { background-color: #dc2626; }
+.color-orange { background-color: orange; color: #222;}
+.color-skyblu { background-color: rgb(36, 188, 249); }
+.color-yellow { background-color: yellow; color: #222;}
+.color-mint { background-color: #a2fffa; color: #222;}
+.color-olive { background-color: olive; }
+.color-purple { background-color: purple; }
+.color-white { background-color: whitesmoke; color: #222;}
+.color-cblue { background-color: blue; }
+.color-cred { background-color: red; }
+.color-cgrn { background-color: green; }
+.color-csf { background-color: grey; }
+.color-cblk { background-color: rgb(0, 0, 0); }
+
+/* 체크박스 옵션 */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .image-section {
+    width: 100%;
+    min-width: auto;
+    padding-top: 20px;
+  }
+
+  .controls-section {
+    width: 100%;
+    height: auto;
+  }
+}
